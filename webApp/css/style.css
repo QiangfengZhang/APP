@@ -1,0 +1,275 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* default start */
+.default {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.top {
+	height: 68px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	background-color: #1a1a1f;
+}
+
+.top .left {
+	float: left;
+	position: absolute;
+	top: 18px;
+	left: 20px;
+	display: flex;
+	height: 32px;
+	line-height: 32px;
+}
+
+.top .left span {
+	font-size: 28px;
+	margin-left: 4px;
+	color: white;
+}
+
+.top h2 {
+	color: white;
+	font-size: 28px;
+	line-height: 68px;
+}
+
+.top .right {
+	float: right;
+	position: absolute;
+	top: 24px;
+	right: 20px;
+}
+
+.nav {
+	position: absolute;
+	top: 68px;
+	left: 0;
+	width: 100%;
+	height: 104px;
+	text-align: center;
+	border-bottom: 2px solid #cbcbcb;
+	background-color: #ffffff;
+}
+
+.nav .left {
+	float: left;
+	position: absolute;
+	top: 22px;
+	left: 20px;
+}
+
+.nav .middle {
+	margin-top: 22px;
+}
+
+.nav .right {
+	float: right;
+	position: absolute;
+	top: 22px;
+	right: 20px;
+}
+/* default end */
+
+/* 折叠菜单开始 */
+nav {
+	position: absolute;
+	top: 174px;
+	width: 100%;
+	height: 156px;
+	background-color: #ffffff;
+	display: none;
+}
+
+nav li {
+	float: left;
+	width: 25%;
+	height: 156px;
+	padding: 27px 0;
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+nav li p {
+	font-size: 28px;
+}
+/* 折叠菜单结束 */
+
+.main {
+	width: 100%;
+}
+
+.main #interspace {
+	width: 100%;
+	height: 24px;
+	padding-top: 174px;
+	background-color: #f5f5f5;
+}
+
+/* 轮播图样式开始 */
+.main .banner {
+	width: 100%;
+	border-bottom: 24px solid #f5f5f5;
+	overflow: hidden;
+	position: relative;
+}
+
+.main .banner ul {
+	width: 300%;
+	-webkit-animation: carousel 4.5s ease-in-out 0s infinite both;
+	   -moz-animation: carousel 4.5s ease-in-out 0s infinite both;
+	    -ms-animation: carousel 4.5s ease-in-out 0s infinite both;
+	     -o-animation: carousel 4.5s ease-in-out 0s infinite both;
+	        animation: carousel 4.5s ease-in-out 0s infinite both;
+}
+
+@keyframes carousel {
+	0% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+
+	33.33% {
+		-webkit-transform: translateX(-33.33%);
+		        transform: translateX(-33.33%);
+	}
+
+	100% {
+		-webkit-transform: translateX(-66.66%);
+		        transform: translateX(-66.66%);
+	}
+}
+
+.main .banner ul li {
+	float: left;
+}
+
+.main .banner li img {
+	width: 100%;
+}
+
+.main .banner .bannerDot {
+	position: absolute;
+	bottom: 21px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.main .banner .bannerDot span {
+	width: 16px;
+	height: 16px;
+	margin: 0 8px;
+	border-radius: 16px;
+	display: inline-block;
+	border: 2px solid #c3c0bf;
+}
+
+.main .banner .bannerDot span.current {
+	background-color: #ffffff;
+}
+/* 轮播图样式结束 */
+
+/* 热门店铺样式开始 */
+.main .shop header {
+	width: 100%;
+	height: 176px;
+	position: relative;
+}
+
+.main .shop .title {
+	position: absolute;
+	top: 58px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.main .shop .title h2 {
+	font-size: 40px;
+}
+
+.main .shop .title p {
+	font-size: 20px;
+	color: red;
+}
+
+.pic_scroll {
+	width: 100%;
+	height: 908px;
+}
+
+.pic_scroll .show {
+	box-sizing: border-box;
+	width: 344px;
+	height: 430px;
+	margin-bottom: 24px;
+	border: 2px solid #eeeeee;
+}
+
+.pic_scroll .show:nth-child(1),
+.pic_scroll .show:nth-child(3) {
+	float: left;
+	margin-left: 20px;
+}
+
+.pic_scroll .show:nth-child(2),
+.pic_scroll .show:nth-child(4) {
+	float: right;
+	margin-right: 20px;
+}
+
+.pic_scroll .show .name {
+	height: 102px;
+	text-align: center;
+	line-height: 102px;
+}
+
+.pic_scroll .show .name p {
+	font-size: 20px;
+}
+
+/* 热门店铺样式结束 */
+
+/* 底部样式开始 */
+
+.foot {
+	width: 100%;
+	height: 172px;
+	background-color: #f6f6f6;
+	position: relative;
+}
+
+.copyright {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.copyright h2 {
+	font-size: 20px;
+}
+
+.copyright p {
+	font-size: 20px;
+}
+
+/* 底部样式结束 */
