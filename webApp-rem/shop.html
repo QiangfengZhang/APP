@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum=1.0, user-scalable=0">
+	<title>店铺</title>
+	<link rel="stylesheet" href="./css/shop.css">
+	<script src="./js/shop.js"></script>
+</head>
+<body>
+	<div class="default" id="default">
+		<!-- 顶部开始 -->
+		<header class="top">
+			<div class="left">
+				<a href="#">
+					<span>返回</span>					
+				</a>
+			</div>
+			<h2>店铺</h2>
+			<div class="right">
+				<a href="#"><img src="./img/top/more.png" alt=".."></a>
+			</div>
+		</header>
+		<!-- 顶部结束 -->
+
+		<!-- 底部开始 -->
+		<footer class="nav">
+			<div class="left">
+				<img src="./img/nav/menu.png" id="menu" alt="..">
+			</div>
+			<div class="middle">
+				<h2>SUN</h2>
+				<h2>CHARM</h2>
+			</div>
+			<div class="right">
+				<a href="#"><img src="./img/nav/cart.png" alt=".."></a>
+			</div>
+		</footer>
+		<!-- 底部结束 -->
+		
+		<!-- 折叠菜单开始 -->
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">
+						<img src="./img/nav/home.png" alt="">
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/nav/activity.png" alt="">
+						<p>活动</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/nav/range.png" alt="">
+						<p>排行</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/nav/mine.png" alt="">
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- 折叠菜单结束 -->
+	</div>
+	<div class="main">
+		<div class="store">
+			<header class="bg"><img src="./img/shop/shop3.png" alt=""></header>
+			<footer class="note">
+				<h1>食尚物语|苗总</h1>
+				<p>粉丝量：1.6W</p>
+				<p>杭州尚旗文化签约艺人</p>
+				<p>工作请联系经纪人杜甜密微信</p>
+				<p>(微博@杜甜密superme)：842019335</p>
+			</footer>
+		</div>
+	</div>
+	<div class="goods">
+		<div class="goods_l">
+			<div class="pic"><a href="goods.html"><img src="./img/shop/fruit.png" alt=""></a></div>
+			<div class="price">
+				<p>综合水果脆皮</p>
+				<p>￥38.00</p>
+			</div>
+		</div>
+		<div class="goods_r">
+			<div class="pic"><img src="./img/shop/cookie.png" alt=""></div>
+			<div class="price">
+				<p>蔓越莓曲奇</p>
+				<p>￥38.00</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+var dpr = window.devicePixelRatio;
+document.documentElement.style.fontSize = (100 / dpr) + "px";
+</script>
+</html>

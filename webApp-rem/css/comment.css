@@ -1,0 +1,140 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-size: 100px;
+}
+
+h2 {
+	font-size: .28rem;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* default start */
+.default {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.top {
+	height: .68rem;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	background-color: #1a1a1f;
+}
+
+.top .left {
+	position: absolute;
+	top: .18rem;
+	left: .20rem;
+}
+
+.top .left a {
+	display: flex;
+	line-height: .32rem;
+	align-items: center;
+	line-height: .32rem;
+}
+
+.top .left a img {
+	width: .18rem;
+	height: .32rem;
+}
+
+.top .left a span {
+	font-size: .28rem;
+	margin-left: .04rem;
+	color: white;
+}
+
+.top h2 {
+	color: white;
+	font-size: .28rem;
+	line-height: .68rem;
+}
+
+.top .right {
+	float: right;
+	position: absolute;
+	top: .29rem;
+	right: .20rem;
+}
+
+.top .right img {
+	width: .46rem;
+	height: .1rem;
+}
+
+/* default end */
+
+.main {
+	padding-top: .68rem;
+}
+
+.comments {
+	width: 100%;
+}
+
+.name {
+	height: .80rem;
+	width: 100%;
+	padding: .30rem 0;
+	line-height: .80rem;
+	border-top: .02rem solid #eeeeee;
+}
+
+.name img {
+	float: left;
+	padding-left: .20rem;
+	width: .8rem;
+	height: .8rem;
+}
+
+.name p,
+.name span {
+	font-size: .40rem;
+}
+
+.name p {
+	float: left;
+	padding-left: .20rem;
+}
+
+.name span {
+	float: right;
+	padding-right: .20rem;
+}
+
+.comment p {
+	width: 100%;
+	font-size: .40rem;
+	padding: 0 .20rem;
+	box-sizing: border-box;
+}
+
+.condition {
+	width: 100%;
+	height: 1rem;
+	line-height: 1rem;
+	padding: .30rem 0;
+}
+
+.condition p {
+	padding-left: .20rem;
+	font-size: .40rem;
+}

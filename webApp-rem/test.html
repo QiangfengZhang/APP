@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>test responsive web design</title>
+	<style>
+	html {
+		font-size: 100px;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	ul, li {
+		list-style: none;
+	}
+
+	.test {
+		width: 4rem;
+		height: 3rem;
+		border: .01rem solid red;
+		position: relative;
+	}
+
+		.test .container {
+			width: 2rem;
+			height: 1.5rem;
+			border: 0.01rem dashed red;
+			position: relative;
+		}
+
+			.test .container img {
+				border: .01rem dashed black;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+	
+	#list {
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+		position: absolute;
+		top: 200px;
+		left: 10px;
+	}
+
+	h1 {
+		font-size: .1rem;
+	}
+
+	#nav {
+		position: absolute;
+		top: 174px;
+		width: 100%;
+		height: 156px;
+		background-color: #ffffff;
+	}
+
+	#nav ul {
+		/*width: 100%;*/
+	}
+
+	#nav ul li {
+		float: left;
+		width: 25%;
+		height: 156px;
+		padding: 27px 0;
+		border: .01rem solid red;
+		display: flex;
+		justify-content: center;
+		box-sizing: border-box;
+	}
+
+	#nav ul li a {
+		border: 1px dashed red;
+		font-size: 0;
+	}
+
+	#nav ul li img {
+		width: 60px;
+		height: 60px;
+		border: 1px solid red;
+	}
+
+	#nav li p {
+		font-size: 28px;
+	}
+/* 折叠菜单结束 */
+
+	.lead_ {
+		border: 1px solid black;
+		height: 32px;
+		/*padding: 0;*/
+		font-size: 0;
+		display: flex;
+		align-items: center;
+		/*background: url(./img/top/back.png) no-repeat left center;*/
+	}
+
+		.lead_ a {
+			display: inline-block;
+			border: 1px solid red;
+			vertical-align: middle;
+			background: url(./img/top/back.png) no-repeat left center;
+		}
+
+		.lead_ a span {
+			font-size: 28px;
+			margin-left: 20px;
+			border: 1px dashed red;
+		}
+
+
+	</style>
+	<script>
+	// var deviceWidth = document.documentElement.clientWidth;
+	// var dpr = window.devicePixelRatio;
+	// document.documentElement.style.fontSize = (deviceWidth / 6.4) + "px";
+	// document.documentElement.style.fontSize = (100 / dpr) + "px";
+	</script>
+</head>
+<body>
+	<div class="test">
+		<div class="container">
+			<img src="./img/top/more.png" alt="">
+		</div>
+	</div>
+	<div id="list">
+		<a href="#">
+			<h1>h1标题</h1>
+		</a>
+	</div>
+
+	<nav id="nav">
+		<ul>
+			<li>
+				<a href="index.html">
+					<img src="./img/nav/home.png" alt=""><br>
+					<p>首页</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="./img/nav/activity.png" alt="">
+					<p>活动</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="./img/nav/range.png" alt="">
+					<p>排行</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="./img/nav/mine.png" alt="">
+					<p>我的</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<br>
+	<div class="lead">
+		<div class="lead_">
+			<a href="#">
+				<img src="./img/top/back.png" alt="">
+				<span>hhhh返回</span>					
+			</a>
+		</div>
+	</div>
+</body>
+</html>
