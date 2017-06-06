@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>个人信息</title>
+	<style>
+	body, div, h1, h2, ul, li, p, a{
+		margin: 0;     
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	ul, li {
+		list-style: none;
+	}
+
+	/* header strat */
+	#top_header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 100;
+		}
+
+		#top_header .menu {
+			width: 100%;
+			height: 53px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid #cbcbcb;
+			background-color: #ffffff;
+		}
+
+			#top_header .menu .left {
+				display: flex;
+				cursor: pointer;
+				padding-right: 6px;
+			}
+
+				#top_header .menu .left img {
+					width: 24px;
+					height: 30px;
+				}
+
+			#top_header .menu .middle {
+				display: flex;
+			}
+
+				#top_header .menu .middle img {
+					width: 69px;
+					height: 31px;
+				}
+
+			#top_header .menu .right a {
+				display: flex;
+			}
+
+				#top_header .menu .right a img {
+					width: 30px;
+					height: 30px;
+				}
+		
+		#top_header #main_menu ul {
+			width: 100%;
+			display: flex;
+		}
+
+			#top_header #main_menu ul li {
+				width: 25%;
+				height: 78px;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+				#top_header #main_menu ul li a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+					#top_header #main_menu ul li a img {
+						width: 30px;
+						height: 30px;
+					}
+	/* header strat */
+
+	.main {
+		padding-top: 53px;
+		background-color: #f6f6f6;
+	}
+
+	.address_check {
+		width: 100%;
+		padding-left: 10px;
+		box-sizing: border-box;
+		border-top: 12px solid #f6f6f6;
+		background-color: #fff;
+	}
+
+		.address_check .columns {
+			width: 100%;
+			height: 53px;
+			border-bottom: 1px solid #f6f6f6;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.address_check .columns:first-child {
+			height: 84px;
+		}
+
+		.address_check .columns:last-child {
+			border-bottom: 0;
+		}
+
+
+			.address_check .columns:first-child .info img {
+				width: 41px;
+				height: 41px;
+			}
+
+			.address_check .columns .info img {
+				width: 7px;
+				height: 12px;
+			}
+
+		.address_check .columns p:first-child {
+			width: 75px;
+			color: #707070;
+		}
+
+		.address_check .columns p:last-child {
+			color: #999999;
+			padding-right: 10px;
+			display: flex;
+			flex-grow: 1;
+			justify-content: flex-end;
+		}
+
+	.more {
+		width: 100%;
+		padding-left: 10px;
+		box-sizing: border-box;
+		border-top: 12px solid #f6f6f6;
+		background-color: #fff;
+	}
+
+		.more .columns {
+			width: 100%;
+			height: 53px;
+			border-bottom: 1px solid #f6f6f6;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+			.more .columns .info img {
+				width: 7px;
+				height: 12px;
+			}
+
+			.more .columns p:first-child {
+				width: 75px;
+				color: #707070;
+			}
+
+			.more .columns p:last-child {
+				color: #999999;
+				padding-right: 10px;
+				display: flex;
+				flex-grow: 1;
+				justify-content: flex-end;
+			}
+
+	.set {
+		width: 100%;
+		height: 46px;
+		padding: 0 20px;
+		box-sizing: border-box;
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-around;
+	}
+
+		.set .cancel,
+		.set .save {
+			width: 40%;
+			height: 44px;
+			border: 1px solid #ff3961;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #ff3961;
+		} 
+
+		.set .save {
+			color: #fff;
+			background-color: #ff3961;
+		}	
+	/* main end */
+
+	/* select gender */
+	#mask {
+		position: absolute;
+		top: 0;
+		z-index: 101;
+		background-color: #000;
+		opacity: .5;
+	}
+
+	.gender {
+		width: 100%;
+		height: 245px;
+		padding: 0 10px;
+		box-sizing: border-box;
+		position: fixed;
+		bottom: 0;
+		z-index: 102;
+	}
+
+		.gender .select {
+			width: 100%;
+			height: 171px;
+			border-radius: 9px;
+		}
+
+			.gender .select .col {
+				height: 56px;
+				border-bottom: 1px solid #f6f6f6;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #fff;
+			}
+
+			.gender .select .col:first-child {
+				border-top-left-radius: 9px;
+				border-top-right-radius: 9px;
+			}
+			.gender .select .col:last-child {
+				border-bottom-left-radius: 9px;
+				border-bottom-right-radius: 9px;
+			}
+
+
+			.gender .select .clor:last-child {
+				border-bottom: 0;
+			}
+
+		.gender #cancel {
+			width: 100%;
+			height: 56px;
+			margin-top: 8px;
+			border-radius: 9px;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<header id="top_header">
+			<div class="menu">
+				<div class="left">
+					<img src="./img/nav/menu.png" alt="" id="menu">
+				</div>
+				<div class="middle">
+					<img src="./img/nav/logo.png" alt="">
+				</div>
+				<div class="right">
+					<a href="cart.html">
+						<img src="./img/nav/cart.png" alt="">
+					</a>
+				</div>
+			</div>
+			<nav id="main_menu" style="display: none">
+				<ul>
+					<li>
+						<a href="index.html">
+							<img src="./img/nav/home.png" alt="">
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="active.html">
+							<img src="./img/nav/activity.png" alt="">
+							<p>活动</p>
+						</a>
+					</li>
+					<li>
+						<a href="hotrange.html">
+							<img src="./img/nav/range.png" alt="">
+							<p>排行</p>
+						</a>
+					</li>
+					<li>
+						<a href="me.html">
+							<img src="./img/nav/mine.png" alt="">
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+	<div class="main">
+		<div class="address_check">
+			<div class="columns">
+				<p class="tit">
+					<span>头像</span>
+				</p>
+				<p class="info">
+					<img src="./img/me/icon.png" alt="">
+				</p>
+			</div>
+			<div class="columns">
+				<p class="tit">
+					<span>昵称</span>
+				</p>
+				<p class="info">
+					<span>喵总</span>
+				</p>
+			</div>
+			<div class="columns">
+				<p class="tit">
+					<span>性别</span>
+				</p>
+				<p class="info">
+					<img src="./img/me/me_right.png" alt="" onclick="select();">
+				</p>
+			</div>
+			<div class="columns">
+				<p class="tit">
+					<span>生日</span>
+				</p>
+				<p class="info">
+					<img src="./img/me/me_right.png" alt="">
+				</p>
+			</div>
+		</div>
+		<div class="more">
+			<div class="columns">
+				<p class="tit">
+					<span>绑定手机</span>
+				</p>
+				<p class="info">
+					<a href="binding.html"><img src="./img/me/me_right.png" alt=""></a>
+				</p>
+			</div>
+			<div class="columns">
+				<p class="tit">
+					<span>修改密码</span>
+				</p>
+				<p class="info">
+					<a href="changepassword.html"><img src="./img/me/me_right.png" alt=""></a>
+				</p>
+			</div>
+		</div>
+		<div class="set">
+			<div class="cancel">取消</div>
+			<div class="save">保存</div>
+		</div>
+	</div>
+	<!-- 遮罩 -->
+	<div id="mask" style="display:none"></div>
+	<div id="gender" class="gender" style="display:none">
+		<div class="select">
+			<div class="col">选择性别</div>
+			<div class="col">女</div>
+			<div class="col">男</div>
+		</div>
+		<div id="cancel" onclick="select()">取消</div>
+	</div>
+</div>
+
+	
+</body>
+<script>
+// 菜单点击隐藏，显示事件
+var menu = document.getElementById("menu");
+var main_menu = document.getElementById("main_menu");
+menu.onclick = function() {
+	if(main_menu.style.display == "none") {
+		main_menu.style.display = "inline"
+	}else {
+		main_menu.style.display = "none"
+	}
+}
+
+
+// 选择性别
+var gender = document.getElementById("gender");
+var mask = document.getElementById("mask");
+mask.style.width = document.documentElement.clientWidth + "px";
+mask.style.height = document.documentElement.clientHeight + "px";
+function select() {
+	if(gender.style.display == "none") {
+		gender.style.display = "inline";
+		mask.style.display = "inline";
+	}else {
+		gender.style.display = "none";
+		mask.style.display = "none";
+	}
+}
+
+</script>
+</html>

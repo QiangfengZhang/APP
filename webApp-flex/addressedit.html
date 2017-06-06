@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>新增地址</title>
+	<style>
+	body, div, h1, h2, ul, li, p{
+		margin: 0;     
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	ul, li {
+		list-style: none;
+	}
+
+	/* header strat */
+	#top_header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 100;
+		}
+
+		#top_header .menu {
+			width: 100%;
+			height: 53px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid #cbcbcb;
+			background-color: #ffffff;
+		}
+
+			#top_header .menu .left {
+				display: flex;
+				cursor: pointer;
+				padding-right: 6px;
+			}
+
+				#top_header .menu .left img {
+					width: 24px;
+					height: 30px;
+				}
+
+			#top_header .menu .middle {
+				display: flex;
+			}
+
+				#top_header .menu .middle img {
+					width: 69px;
+					height: 31px;
+				}
+
+			#top_header .menu .right a {
+				display: flex;
+			}
+
+				#top_header .menu .right a img {
+					width: 30px;
+					height: 30px;
+				}
+		
+		#top_header #main_menu ul {
+			width: 100%;
+			height: 78px;
+			display: flex;
+		}
+
+			#top_header #main_menu ul li {
+				width: 25%;
+				height: 78px;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+				#top_header #main_menu ul li a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+					#top_header #main_menu ul li a img {
+						width: 30px;
+						height: 30px;
+					}
+	/* header strat */
+
+	.main {
+		padding-top: 53px;
+	}
+
+	.address_add {
+		width: 100%;
+		padding-left: 10px;
+		box-sizing: border-box;
+		border-top: 12px solid #f6f6f6;
+	}
+
+		.address_add .columns {
+			width: 100%;
+			height: 49px;
+			border-bottom: 1px solid #f6f6f6;
+			display: flex;
+			align-items: center;
+		}
+
+		.address_add .columns p:first-child {
+			width: 75px;
+			color: #707070;
+		}
+
+		.address_add .columns p:last-child {
+			color: #999999;
+			padding-right: 10px;
+			display: flex;
+			flex-grow: 1;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.address_add .columns .info input {
+			border: none;
+			outline: none;
+		}
+
+		.address_add .columns .info img {
+			width: 13px;
+			height: 13px;
+		}
+
+	.set {
+		width: 100%;
+		height: 46px;
+		padding: 0 20px;
+		box-sizing: border-box;
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+	}
+
+		.set .save {
+			width: 40%;
+			height: 44px;
+			border: 1px solid #ff3961;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			background-color: #ff3961;
+		}	
+	/* main end */
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header id="top_header">
+			<div class="menu">
+				<div class="left">
+					<img src="./img/nav/menu.png" alt="" id="menu">
+				</div>
+				<div class="middle">
+					<img src="./img/nav/logo.png" alt="">
+				</div>
+				<div class="right">
+					<a href="cart.html">
+						<img src="./img/nav/cart.png" alt="">
+					</a>
+				</div>
+			</div>
+			<nav id="main_menu" style="display: none">
+				<ul>
+					<li>
+						<a href="index.html">
+							<img src="./img/nav/home.png" alt="">
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="active.html">
+							<img src="./img/nav/activity.png" alt="">
+							<p>活动</p>
+						</a>
+					</li>
+					<li>
+						<a href="hotrange.html">
+							<img src="./img/nav/range.png" alt="">
+							<p>排行</p>
+						</a>
+					</li>
+					<li>
+						<a href="me.html">
+							<img src="./img/nav/mine.png" alt="">
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="main">
+			<div class="address_add">
+				<div class="columns">
+					<p class="tit">
+						<span>收件人</span>
+					</p>
+					<p class="info">
+						<input type="text" placeholder="请输入收件人姓名">
+					</p>
+				</div>
+				<div class="columns">
+					<p class="tit">
+						<span>电话号码</span>
+					</p>
+					<p class="info">
+						<input type="text" placeholder="请输入手机号码">
+					</p>
+				</div>
+				<div class="columns">
+					<p class="tit">
+						<span>所在地区</span>
+					</p>
+					<p class="info">
+						<input type="text" placeholder="省份、城市、区县">
+						<a href="#"><img src="./img/cart/right.png" alt=""></a>
+					</p>
+				</div>
+				<div class="columns">
+					<p class="tit">
+						<span>详情地址</span>
+					</p>
+					<p class="info">
+						<input type="text" placeholder="请输入详细地址">
+					</p>
+				</div>
+				<div class="columns">
+					<p class="tit">
+						<span>邮政编码</span>
+					</p>
+					<p class="info">
+						<input type="text" placeholder="请输入邮政编码">
+					</p>
+				</div>
+			</div>
+			<div class="set">
+				<div class="save">保存</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script>
+// 菜单点击隐藏，显示事件
+var menu = document.getElementById("menu");
+var main_menu = document.getElementById("main_menu");
+menu.onclick = function() {
+	if(main_menu.style.display == "none") {
+		main_menu.style.display = "inline"
+	}else {
+		main_menu.style.display = "none"
+	}
+}
+</script>
+</html>

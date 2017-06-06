@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>详情</title>
+	<link rel="stylesheet" href="./css/goods.css">
+	<script src="./js/goods.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<header id="top_header">
+			<div class="menu">
+				<div class="menu_l">
+					<img src="./img/nav/menu.png" alt="" id="menu">
+				</div>
+				<div class="menu_m">
+					<img src="./img/nav/logo.png" alt="">
+				</div>
+				<div class="menu_r">
+					<a href="cart.html">
+						<img src="./img/nav/cart.png" alt="">
+					</a>
+				</div>
+			</div>
+			<nav id="main_menu" style="display: none">
+				<ul>
+					<li>
+						<a href="index.html">
+							<img src="./img/nav/home.png" alt="">
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="active.html">
+							<img src="./img/nav/activity.png" alt="">
+							<p>活动</p>
+						</a>
+					</li>
+					<li>
+						<a href="hotrange.html">
+							<img src="./img/nav/range.png" alt="">
+							<p>排行</p>
+						</a>
+					</li>
+					<li>
+						<a href="me.html">
+							<img src="./img/nav/mine.png" alt="">
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="main">
+			<div class="banner">
+				<img src="./img/shop/goods.png" alt="">
+			</div>
+			<div class="name">
+				<p>综合水果脆皮 喵总推荐</p>
+				<p>￥ 38.00</p>
+			</div>
+			<div class="details" id="info">
+				<span>商品详情</span>
+				<img src="./img/cart/right.png" alt="" onclick="select()">
+			</div>
+			<div class="details">
+				<span>评价</span>
+				<a href="comment.html"><img src="./img/cart/right.png" alt=""></a>
+			</div>
+		</div>
+		<footer>
+			<ul class="toolbar">
+				<li id="collect">
+					<img id="collected" src="./img/nav/heart.png" alt="">
+					<img id="cancle" src="./img/nav/heart_.png" alt="">
+				</li>
+				<li><span id="add">加入购物车</span></li>
+				<li><span id="buy">立即购买</span></li>
+			</ul>
+		</footer>
+
+		<!-- 遮罩 -->
+		<div id="mask" style="display:none"></div>
+		<div class="container" id="container" style="display:none">
+			<div class="infos" >
+				<div class="goods_">
+					<div class="pic">
+						<img src="./img/cart/fruit_1.png" alt="">
+					</div>
+					<div class="pri">
+						<p>￥28.00-68.00</p>
+						<p>请选择规格分类</p>
+					</div>
+					<div class="close" onclick="select()">
+						<img src="./img/cart/close.png" alt="">
+					</div>
+				</div>
+				<div class="norms">
+					<div class="norm">
+						<span>规格</span>
+					</div>
+					<div class="kg">
+						<span>100g/袋</span>
+						<span>200g/袋</span>
+						<span>300g/袋</span>
+						<span>400g/袋</span>
+						<span>500g/袋</span>
+						<span>600g/袋</span>
+					</div>
+				</div>
+				<div class="amount">
+					<div>数量</div>
+					<div class="operate">
+						<span> － </span>
+						<span> 0 </span>
+						<span> ＋ </span>
+					</div>
+				</div>
+			</div>
+			<div class="set">
+				<span>加入购物车</span>
+				<span>立即购买</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+
+// 弹窗遮罩
+var container = document.getElementById("container");
+var mask = document.getElementById("mask");
+mask.style.width = document.documentElement.clientWidth + "px";
+mask.style.height = document.documentElement.clientHeight + "px";
+function select() {
+	if(container.style.display == "none") {
+		container.style.display = "inline";
+		mask.style.display = "inline";
+	}else {
+		container.style.display = "none";
+		mask.style.display = "none";
+	}
+}
+</script>
+</html>

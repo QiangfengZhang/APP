@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>月榜</title>
+	<style>
+	body, div, h1, h2, ul, li, p, a{
+		margin: 0;     
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	ul, li {
+		list-style: none;
+	}
+
+	.main {
+		width: 100%;
+	}
+
+	.select {
+		width: 100%;
+		height: 46px;
+		border-bottom: 12px solid #f6f6f6;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+		.select span {
+			display: flex;
+			align-items: center;
+			height: 46px;
+			cursor: pointer;
+		}
+
+		.select span.current {
+			color: #ff3961;
+			border-bottom: 1px solid #ff3961;
+		}
+
+	.store {
+		width: 100%;
+		height: 357px;
+		border-bottom: 12px solid #f6f6f6;
+	}
+
+		.store .pho {
+			text-align: center;
+		}
+
+		.store .pho img {
+			width: 375px;
+			height: 245px;
+		}
+
+		.store .intr {
+			width: 100%;
+			height: 112px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+			.store .intr b {
+				color: #ff3961;
+			}
+
+	.products {
+		width: 100%;
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
+
+	.pro_list {
+		width: 100%;
+		margin-top: 10px;
+		height: 138px;
+		border: 1px solid #eee;
+		display: flex;
+		align-items: center;
+	}
+
+		.pro_list .pic {
+			width: 78px;
+			margin: 0 33px;
+			border: 1px solid #eee;
+		}
+
+			.pro_list .pic img {
+				width: 78px;
+				height: 78px;
+			}
+
+		.pro_list .info {
+			height: 80px;
+			padding-left: 12px;
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+			.pro_list .info .sale {
+				color: #ff3961;
+			}
+
+	/* main end */
+
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="main">
+		<div class="select">
+			<span id="shop">店铺</span>
+			<span id="pro">单品</span>
+		</div>
+		<!-- hot shop -->
+		<div class="shops" id="shops">
+			<div class="store">
+				<div class="pho">
+					<img src="./img/shop/store.png" alt="">
+				</div>
+				<div class="intr">
+					<h2>喵总|食尚物语</h2>
+					<p>店铺简介描述 店铺简介描述</p>
+					<b>销量：23W</b>
+				</div>
+			</div>
+
+			<div class="store">
+				<div class="pho">
+					<img src="./img/shop/store.png" alt="">
+				</div>
+				<div class="intr">
+					<h2>喵总|食尚物语</h2>
+					<p>店铺简介描述 店铺简介描述</p>
+					<b>销量：23W</b>
+				</div>
+			</div>
+		</div>
+
+		<!-- hot products -->
+		<div class="products" style="display:none" id="products">
+			<div class="pro_list">
+				<div class="pic">
+					<img src="./img/cart/fruit.png" alt="">
+				</div>
+				<div class="info">
+					<p class="name">综合水果脆皮 综合水果脆皮 综合水果脆皮 综合水果脆皮</p>
+					<p class="sale">已售：933</p>
+				</div>
+			</div>
+
+			<div class="pro_list">
+				<div class="pic">
+					<img src="./img/cart/cookie.png" alt="">
+				</div>
+				<div class="info">
+					<p class="name">蔓越莓曲奇 蔓越莓曲奇 蔓越莓曲奇 蔓越莓曲奇</p>
+					<p class="sale">已售：1000</p>
+				</div>
+			</div>
+			<div class="pro_list">
+				<div class="pic">
+					<img src="./img/cart/fruit.png" alt="">
+				</div>
+				<div class="info">
+					<p class="name">综合水果脆皮 综合水果脆皮 综合水果脆皮 综合水果脆皮</p>
+					<p class="sale">已售：933</p>
+				</div>
+			</div>
+
+			<div class="pro_list">
+				<div class="pic">
+					<img src="./img/cart/cookie.png" alt="">
+				</div>
+				<div class="info">
+					<p class="name">蔓越莓曲奇 蔓越莓曲奇 蔓越莓曲奇 蔓越莓曲奇</p>
+					<p class="sale">已售：1000</p>
+				</div>
+			</div>
+			<div class="pro_list">
+				<div class="pic">
+					<img src="./img/cart/fruit.png" alt="">
+				</div>
+				<div class="info">
+					<p class="name">综合水果脆皮 综合水果脆皮 综合水果脆皮 综合水果脆皮</p>
+					<p class="sale">已售：933</p>
+				</div>
+			</div>
+
+			<div class="pro_list">
+				<div class="pic">
+					<img src="./img/cart/cookie.png" alt="">
+				</div>
+				<div class="info">
+					<p class="name">蔓越莓曲奇 蔓越莓曲奇 蔓越莓曲奇 蔓越莓曲奇</p>
+					<p class="sale">已售：1000</p>
+				</div>
+			</div>
+			<div class="pro_list">
+				<div class="pic">
+					<img src="./img/cart/fruit.png" alt="">
+				</div>
+				<div class="info">
+					<p class="name">综合水果脆皮 综合水果脆皮 综合水果脆皮 综合水果脆皮</p>
+					<p class="sale">已售：933</p>
+				</div>
+			</div>
+
+			<div class="pro_list">
+				<div class="pic">
+					<img src="./img/cart/cookie.png" alt="">
+				</div>
+				<div class="info">
+					<p class="name">蔓越莓曲奇 蔓越莓曲奇 蔓越莓曲奇 蔓越莓曲奇</p>
+					<p class="sale">已售：1000</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+</body>
+<script>
+
+
+// 绑定点击查看月榜-店铺、单品
+var hot = document.getElementById("pro");
+var shop = document.getElementById("shop");
+var hot_list = document.getElementById("products")
+var shop_list = document.getElementById("shops")
+
+// 默认显示在 shop 页面
+shop.setAttribute("class", "current");
+
+hot.onclick = function() {
+	hot_list.style.display = "block";
+	shop_list.style.display = "none";
+	hot.setAttribute("class", "current");
+	shop.setAttribute("class", "");
+}
+
+shop.onclick = function() {
+	shop_list.style.display = "block";
+	hot_list.style.display = "none";
+	shop.setAttribute("class", "current");
+	hot.setAttribute("class", "");
+}
+
+</script>
+</html>

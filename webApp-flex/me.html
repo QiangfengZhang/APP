@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>我的购物车</title>
+	<style>
+	body, div, h1, h2, ul, li, p{
+		margin: 0;     
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	ul, li {
+		list-style: none;
+	}
+
+	/* header strat */
+	#top_header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 100;
+		}
+
+			#top_header .menu {
+				width: 100%;
+				height: 53px;
+				padding: 0 10px;
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-bottom: 1px solid #cbcbcb;
+				background-color: #ffffff;
+			}
+
+				#top_header .menu .left {
+					display: flex;
+					cursor: pointer;
+					padding-right: 6px;
+				}
+
+					#top_header .menu .left img {
+						width: 24px;
+						height: 30px;
+					}
+
+				#top_header .menu .middle {
+					display: flex;
+				}
+
+					#top_header .menu .middle img {
+						width: 69px;
+						height: 31px;
+					}
+
+				#top_header .menu .right a {
+					display: flex;
+				}
+
+					#top_header .menu .right a img {
+						width: 30px;
+						height: 30px;
+					}
+			
+			#top_header #main_menu ul {
+				width: 100%;
+				display: flex;
+			}
+
+				#top_header #main_menu ul li {
+					width: 25%;
+					height: 78px;
+					background-color: #fff;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
+					#top_header #main_menu ul li a {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+					}
+
+						#top_header #main_menu ul li a img {
+							width: 30px;
+							height: 30px;
+						}
+	/* header strat */
+	.main {
+		padding-top: 53px;
+	}
+
+	.shopkeeper {
+		width: 100%;
+		height: 212px;
+		border-bottom: 12px solid #eee;
+		background: linear-gradient(to right, #ff637f, #f194ff);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+		.shopkeeper img {
+			width: 88px;
+			height: 88px;
+		}
+
+	.columns {
+		width: 100%;
+		height: 54px;
+		padding: 0 10px;
+		border-bottom: 1px solid #eee;
+		box-sizing: border-box;
+		color: #7a7a7a;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+		.columns .item_to {
+			display: flex;
+			flex-grow: 1;
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		.columns .item_to span {
+			margin-right: 8px;
+		}
+
+		.columns .item_to a img {
+			width: 7px;
+			height: 12px;
+		}	
+	/* main end */
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header id="top_header">
+			<div class="menu">
+				<div class="left">
+					<img src="./img/nav/menu.png" alt="" id="menu">
+				</div>
+				<div class="middle">
+					<img src="./img/nav/logo.png" alt="">
+				</div>
+				<div class="right">
+					<a href="cart.html">
+						<img src="./img/nav/cart.png" alt="">
+					</a>
+				</div>
+			</div>
+			<nav id="main_menu" style="display: none">
+				<ul>
+					<li>
+						<a href="index.html">
+							<img src="./img/nav/home.png" alt="">
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="active.html">
+							<img src="./img/nav/activity.png" alt="">
+							<p>活动</p>
+						</a>
+					</li>
+					<li>
+						<a href="hotrange.html">
+							<img src="./img/nav/range.png" alt="">
+							<p>排行</p>
+						</a>
+					</li>
+					<li>
+						<a href="me.html">
+							<img src="./img/nav/mine.png" alt="">
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="main">
+			<div class="shopkeeper">
+				<img src="./img/me/miaozong.png" alt="">
+			</div>
+
+			<div class="columns">
+				<div class="item">待付款订单</div>
+				<div class="item_to">
+					<span>2笔</span>
+					<a href="obligation.html"><img src="./img/me/me_right.png" alt=""></a>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="item">全部订单</div>
+				<div class="item_to">
+					<span></span>
+					<a href="orders.html"><img src="./img/me/me_right.png" alt=""></a>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="item">我的收藏</div>
+				<div class="item_to">
+					<span>10</span>
+					<a href="collect.html"><img src="./img/me/me_right.png" alt=""></a>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="item">地址管理</div>
+				<div class="item_to">
+					<a href="address.html"><img src="./img/me/me_right.png" alt=""></a>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="item">售后服务</div>
+				<div class="item_to">
+					<a href="service.html"><img src="./img/me/me_right.png" alt=""></a>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="item">商务合作</div>
+				<div class="item_to">
+					<span>13750831774</span>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="item">关于我们</div>
+				<div class="item_to">
+					<span></span>
+					<a href="#"><img src="./img/me/me_right.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script>
+// 菜单点击隐藏，显示事件
+var menu = document.getElementById("menu");
+var main_menu = document.getElementById("main_menu");
+menu.onclick = function() {
+	if(main_menu.style.display == "none") {
+		main_menu.style.display = "inline"
+	}else {
+		main_menu.style.display = "none"
+	}
+}
+
+</script>
+</html>

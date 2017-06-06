@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>查看物流</title>
+	<style>
+	body, div, h1, h2, ul, li, p, a{
+		margin: 0;     
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	ul, li {
+		list-style: none;
+	}
+
+	.order {
+		height: 100px;
+		padding-left: 10px;
+		border-top: 1px solid #eee;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		color: #a4a4a4;
+	}
+
+		.order p span {
+			padding-left: 10px;
+			color: #666;
+		}
+
+	.logistics {
+		width: 100%;
+		border-top: 12px solid #f6f6f6;
+		position: relative;
+	}
+
+	.logistics .aside {
+		width: 33px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.logistics .aside .path {
+		position: relative;
+		padding-right: 16px;
+	}
+
+		.logistics .aside .path .path_1 {
+			width: 16px;
+			height: 28px;
+			border-right: 1px solid #ddd;
+		}
+
+		.logistics .aside .path:first-child .path_1 {
+			border-right: 0;
+		}
+
+		.logistics .aside .path .dot {
+			width: 0;
+			height: 0;
+			border: 4px solid #ddd;
+			border-radius: 4px;
+			position: absolute;
+			top: 24px;
+			left: 12px;
+		}
+
+		.logistics .aside .path:first-child .dot {
+			border: 6px solid #ff3961;
+			border-radius: 6px;
+			top: 22px;
+			left: 10px;
+		}
+
+
+		.logistics .aside .path .path_2 {
+			width: 16px;
+			height: 72px;
+			border-right: 1px solid #ddd;
+		}
+
+		.logistics .aside .path:last-child .path_2 {
+			border-right: 0;
+		}
+
+	.logistics .location {
+		width: 100%;
+		padding-left: 33px;
+		box-sizing: border-box;
+	}
+
+	.logistics .location .cols {
+		height: 99px;
+		border-bottom: 1px solid #eee;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.logistics .location .cols:last-child {
+		border-bottom: 0;
+	}
+
+
+	/* main end */
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="main">
+			<div class="order">
+				<p>运单编号:<span>2017022113571234</span></p>
+				<p>承运来源:<span>中通快递</span></p>
+				<p>官方电话:<span>400-1234-567</span></p>
+			</div>
+			<div class="logistics">
+				<div class="aside">
+					<div class="path">
+						<div class="path_1"></div>
+						<div class="dot"></div>
+						<div class="path_2"></div>
+					</div>
+					<div class="path">
+						<div class="path_1"></div>
+						<div class="dot"></div>
+						<div class="path_2"></div>
+					</div>
+					<div class="path">
+						<div class="path_1"></div>
+						<div class="dot"></div>
+						<div class="path_2"></div>
+					</div>
+					<div class="path">
+						<div class="path_1"></div>
+						<div class="dot"></div>
+						<div class="path_2"></div>
+					</div>
+					<div class="path">
+						<div class="path_1"></div>
+						<div class="dot"></div>
+						<div class="path_2"></div>
+					</div>
+				</div>
+				<div class="location">
+					<div class="cols">
+						<p>签收人：邮件收发章 已签收 感谢使用中通快递，期待再次为您服务</p>
+						<p>2017-02-21 16:10</p>
+					</div>
+					<div class="cols">
+						<p>快件已被江虹国际创意园 丰巢快递柜已代收，如有问题请联系派件员<span>18293847292</span></p>
+						<p>2017-02-21 09:10</p>
+					</div>
+					<div class="cols">
+						<p>【浙江省杭州市滨江公司】 派件员：严冬 派件中 派件员电话<span>18293847292</span></p>
+						<p>2017-02-21 08:10</p>
+					</div>
+					<div class="cols">
+						<p>【浙江省杭州市滨江公司】已发出</p>
+						<p>2017-02-20 16:10</p>
+					</div>
+					<div class="cols">
+						<p>【浙江省杭州市滨江公司】已收入</p>
+						<p>2017-02-20 10:10</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+<script>
+</script>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>地址管理</title>
+	<style>
+	body, div, h1, h2, ul, li, p, a {
+		margin: 0;     
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	ul, li {
+		list-style: none;
+	}
+
+	/* header strat */
+	#top_header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 100;
+		}
+
+		#top_header .menu {
+			width: 100%;
+			height: 53px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid #cbcbcb;
+			background-color: #ffffff;
+		}
+
+			#top_header .menu .left {
+				display: flex;
+				cursor: pointer;
+				padding-right: 6px;
+			}
+
+				#top_header .menu .left img {
+					width: 24px;
+					height: 30px;
+				}
+
+			#top_header .menu .middle {
+				display: flex;
+			}
+
+				#top_header .menu .middle img {
+					width: 69px;
+					height: 31px;
+				}
+
+			#top_header .menu .right a {
+				display: flex;
+			}
+
+				#top_header .menu .right a img {
+					width: 30px;
+					height: 30px;
+				}
+		
+		#top_header #main_menu ul {
+			width: 100%;
+			height: 78px;
+			display: flex;
+		}
+
+			#top_header #main_menu ul li {
+				width: 25%;
+				height: 78px;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+				#top_header #main_menu ul li a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+					#top_header #main_menu ul li a img {
+						width: 30px;
+						height: 30px;
+					}
+	/* header strat */
+
+	.main {
+		padding-top: 53px;
+	}
+
+	.addresses {
+		width: 100%;		
+	}
+
+		.addresses .add {
+			width: 100%;
+			height: 60px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+			.addresses .add .add_edit {
+				display: flex;
+			}
+
+			.addresses .add .add_edit img {
+				width: 19px;
+				height: 19px;
+			}
+
+			.addresses .add .add_edit > span {
+				padding-left: 7px;
+			}
+
+			.addresses .add .add_more img {
+				display: flex;
+				width: 13px;
+				height: 13px;
+			}
+
+		.addresses .address {
+			width: 100%;
+			height: 162px;
+			padding-left: 10px;
+			border-top: 12px solid #eee;
+			box-sizing: border-box;
+		}
+
+			.addresses .address .details {
+				width: 100%;
+				height: 48px;
+				padding: 26px 0 26px 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			
+			.addresses .address .details p, {
+				display: flex;
+			}
+
+		.addresses .address .settings {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			border-top: 1px solid #eee;
+		}
+
+		.addresses .address .settings .default,
+		.addresses .address .settings .edit {
+			height: 49px;
+			display: flex;
+			align-items: center;
+		}
+
+		.addresses .address .settings .edit {
+			padding-right: 10px;
+			width: 95px;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+			.addresses .address .settings .edit span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 42px;
+				height: 22px;
+				border: 1px solid #999;
+				color: #999;
+			}
+
+			.addresses .address .settings .default .set {
+				padding-left: 10px;
+			}
+	/* main end */
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header id="top_header">
+			<div class="menu">
+				<div class="left">
+					<img src="./img/nav/menu.png" alt="" id="menu">
+				</div>
+				<div class="middle">
+					<img src="./img/nav/logo.png" alt="">
+				</div>
+				<div class="right">
+					<a href="cart.html">
+						<img src="./img/nav/cart.png" alt="">
+					</a>
+				</div>
+			</div>
+			<nav id="main_menu" style="display: none">
+				<ul>
+					<li>
+						<a href="index.html">
+							<img src="./img/nav/home.png" alt="">
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="active.html">
+							<img src="./img/nav/activity.png" alt="">
+							<p>活动</p>
+						</a>
+					</li>
+					<li>
+						<a href="hotrange.html">
+							<img src="./img/nav/range.png" alt="">
+							<p>排行</p>
+						</a>
+					</li>
+					<li>
+						<a href="me.html">
+							<img src="./img/nav/mine.png" alt="">
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="main">
+			<div class="addresses">
+				<div class="add">
+					<div class="add_edit">
+						<img src="./img/order/add.png" alt="">
+						<span>添加收货地址</span>
+					</div>
+					<div class="add_more">
+						<a href="addressedit.html"><img src="./img/cart/right.png" alt=""></a>
+					</div>
+				</div>
+				<div class="address">
+					<div class="details">
+						<p>
+							<b>
+								<span class="name">夏天</span>
+								<span class="tel">186****8273</span>
+							</b>
+						</p>
+						<p class="site">浙江省杭州市滨江区秋溢路江虹国际创意园6w-601</p>
+					</div>
+					<div class="settings">
+						<div class="default">
+							<input type="checkbox">
+							<span class="set">设为默认</span>
+						</div>
+						<div class="edit">
+							<span class="editing">编辑</span>
+							<span class="delete">删除</span>
+						</div>
+					</div>
+				</div>
+				<div class="address">
+					<div class="details">
+						<p>
+							<b>
+								<span class="name">夏天</span>
+								<span class="tel">186****8273</span>
+							</b>
+						</p>
+						<p class="site">浙江省杭州市滨江区秋溢路江虹国际创意园6w-601</p>
+					</div>
+					<div class="settings">
+						<div class="default">
+							<input type="checkbox">
+							<span class="set">设为默认</span>
+						</div>
+						<div class="edit">
+							<span class="editing">编辑</span>
+							<span class="delete">删除</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script>
+// 菜单点击隐藏，显示事件
+var menu = document.getElementById("menu");
+var main_menu = document.getElementById("main_menu");
+menu.onclick = function() {
+	if(main_menu.style.display == "none") {
+		main_menu.style.display = "inline"
+	}else {
+		main_menu.style.display = "none"
+	}
+}
+</script>
+</html>

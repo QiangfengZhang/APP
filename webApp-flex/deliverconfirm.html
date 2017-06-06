@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>订单</title>
+	<style>
+	body, div, h1, h2, ul, li, p{
+		margin: 0;     
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	ul, li {
+		list-style: none;
+	}
+
+	/* top header start */
+	#top_header {
+			width: 100%;
+			position: fixed;
+			top: 0;
+			z-index: 100;
+		}
+
+		#top_header .menu {
+			width: 100%;
+			height: 53px;
+			box-sizing: border-box;
+			padding: 0 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid #cbcbcb;
+			background-color: #ffffff;
+		}
+
+			#top_header .menu .menu_l {
+				display: flex;
+				cursor: pointer;
+				padding-right: 6px;
+			}
+
+				#top_header .menu .menu_l img {
+					width: 24px;
+					height: 30px;
+				}
+
+			#top_header .menu .menu_m {
+				display: flex;
+			}
+
+				#top_header .menu .menu_m img {
+					width: 69px;
+					height: 31px;
+				}
+
+			#top_header .menu .menu_r a {
+				display: flex;
+			}
+
+				#top_header .menu .menu_r a img {
+					width: 30px;
+					height: 30px;
+				}
+		
+		#top_header #main_menu ul {
+			width: 100%;
+			height: 78px;
+			display: flex;
+		}
+
+			#top_header #main_menu ul li {
+				width: 25%;
+				height: 78px;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+				#top_header #main_menu ul li a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+					#top_header #main_menu ul li a img {
+						width: 30px;
+						height: 30px;
+					}
+	/* header strat */
+
+	.main {
+		padding-top: 53px;
+	}
+
+	.shopkeeper {
+		width: 100%;
+		height: 72px;
+		padding: 0 10px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		border-top: 12px solid #f6f6f6;
+		border-bottom: 1px solid #cbcbcb;
+	}
+
+		.shopkeeper .left {
+			width: 36px;
+			display: flex;
+			align-items: center;
+		}
+
+			.shopkeeper .left img {
+				width: 36px;
+				height: 36px;
+			}
+
+		.shopkeeper .right {
+			display: flex;
+			flex-grow: 1;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+			.shopkeeper .right span {
+				padding-left: 5px;
+			}
+
+			.shopkeeper .right span:last-child {
+				color: #ff3961;
+			}
+
+	.products {
+		width: 100%;
+		padding-left: 10px;
+		box-sizing: border-box;
+	}
+
+	.pro_list {
+		width: 100%;
+		height: 104px;
+		border-bottom: 1px solid #eee;
+		padding-right: 10px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+	}
+
+		.pro_list .pic {
+			width: 78px;
+			height: 78px;
+			border: 1px solid #eee;
+		}
+
+			.pro_list .pic img {
+				width: 78px;
+				height: 78px;
+			}
+
+		.pro_list .info {
+			height: 80px;
+			padding-left: 14px;
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+
+			.pro_list .info .price {
+				color: #ff3961;
+			}
+
+	
+		.pro_list .count {
+			width: 95px;
+		}
+
+			.pro_list .count .amount {
+				display: flex;
+				justify-content: flex-end;
+			}
+			
+	.calculate {
+		width: 100%;
+		height: 49px;
+		color: #7a7a7a;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		border-bottom: 1px solid #eee;
+	}
+
+		.calculate span {
+			margin-right: 10px;
+		}
+
+		.calculate span:last-child {
+			color: #ff3961;
+		}
+
+		.calculate div {
+			width: 68px;
+			height: 26px;
+			border: 1px solid #ddd;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 10px;
+		}
+
+		.calculate div a {
+			color: #999;
+		}
+
+		.calculate div:hover,
+		.calculate div:hover a {
+			border-color: #ff3961;
+			color: #ff3961;
+			cursor: pointer;
+		}
+	/* main end */
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header id="top_header">
+			<div class="menu">
+				<div class="menu_l">
+					<img src="./img/nav/menu.png" alt="" id="menu">
+				</div>
+				<div class="menu_m">
+					<img src="./img/nav/logo.png" alt="">
+				</div>
+				<div class="menu_r">
+					<a href="cart.html">
+						<img src="./img/nav/cart.png" alt="">
+					</a>
+				</div>
+			</div>
+			<nav id="main_menu" style="display: none">
+				<ul>
+					<li>
+						<a href="index.html">
+							<img src="./img/nav/home.png" alt="">
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="active.html">
+							<img src="./img/nav/activity.png" alt="">
+							<p>活动</p>
+						</a>
+					</li>
+					<li>
+						<a href="hotrange.html">
+							<img src="./img/nav/range.png" alt="">
+							<p>排行</p>
+						</a>
+					</li>
+					<li>
+						<a href="me.html">
+							<img src="./img/nav/mine.png" alt="">
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="main">
+			<div class="shopkeeper">
+				<div class="left">
+					<img src="./img/cart/shopkeeper.png" alt="">
+				</div>
+				<div class="right">
+					<span>喵总|食尚物语</span>
+					<span>待收货</span>
+				</div>
+			</div>
+			<div class="products">
+				<div class="pro_list">
+					<div class="pic">
+						<img src="./img/cart/fruit.png" alt="">
+					</div>
+					<div class="info">
+						<strong class="name">综合水果脆皮</strong>
+						<p class="standard">规格：100g/袋</p>
+						<p class="price">￥28.00</p>
+					</div>
+					<div class="count">
+						<div class="amount">
+							<span> X </span>
+							<span> 1 </span>
+						</div>
+					</div>
+				</div>
+
+				<div class="pro_list">
+					<div class="pic">
+						<img src="./img/cart/cookie.png" alt="">
+					</div>
+					<div class="info">
+						<strong class="name">蔓越莓曲奇</strong>
+						<p class="standard">规格：100g/袋</p>
+						<p class="price">￥28.00</p>
+					</div>
+					<div class="count">
+						<div class="amount">
+							<span> X </span>
+							<span> 1 </span>
+						</div>							
+					</div>
+				</div>
+				<div class="calculate freight">
+					<span>共2件商品</span>
+					<span>实付款:</span>
+					<span>￥66.00</span>
+				</div>
+				<div class="calculate operate">
+					<div id="express"><a href="logistics.html">查看物流</a></div>
+					<div id="confirm"><a href="tocomment.html">确认收货</a></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+<script>
+// 菜单点击隐藏，显示事件
+var menu = document.getElementById("menu");
+var main_menu = document.getElementById("main_menu");
+menu.onclick = function() {
+	if(main_menu.style.display == "none") {
+		main_menu.style.display = "inline"
+	}else {
+		main_menu.style.display = "none"
+	}
+}
+
+</script>
+</html>

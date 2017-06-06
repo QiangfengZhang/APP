@@ -1,0 +1,176 @@
+body, div, h1, h2, ul, li, p{
+	margin: 0;     
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul, li {
+	list-style: none;
+}
+
+/* header strat */
+#top_header {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 100;
+	}
+
+	#top_header .menu {
+		width: 100%;
+		height: 53px;
+		box-sizing: border-box;
+		padding: 0 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid #cbcbcb;
+		background-color: #ffffff;
+	}
+
+		#top_header .menu .menu_l {
+			display: flex;
+			cursor: pointer;
+			padding-right: 6px;
+		}
+
+			#top_header .menu .menu_l img {
+				width: 24px;
+				height: 30px;
+			}
+
+		#top_header .menu .menu_m {
+			display: flex;
+		}
+
+			#top_header .menu .menu_m img {
+				width: 69px;
+				height: 31px;
+			}
+
+		#top_header .menu .menu_r a {
+			display: flex;
+		}
+
+			#top_header .menu .menu_r a img {
+				width: 30px;
+				height: 30px;
+			}
+	
+	#top_header #main_menu ul {
+		width: 100%;
+		height: 78px;
+		display: flex;
+	}
+
+		#top_header #main_menu ul li {
+			width: 25%;
+			height: 78px;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+			#top_header #main_menu ul li a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+				#top_header #main_menu ul li a img {
+					width: 30px;
+					height: 30px;
+				}
+/* header strat */
+
+/* 店铺展示 */
+.main {
+	padding-top: 53px;
+}
+
+.store {
+	width: 100%;
+}
+
+	.store .bg {
+		width: 375px;
+		margin: 0 auto;
+	}
+
+		.store .bg img {
+			width: 375px;
+			height: 227px;
+		}
+
+	.store .note {
+		height: 128px;
+		text-align: center;
+		border-bottom: 12px solid #f6f6f6;
+	}
+
+
+	.store .note p:nth-child(2) {
+		color: red;
+	}
+
+.goods {
+	width: 100%;
+	height: 184px;
+	background-color: #ffffff;
+	position: relative;
+}
+
+.goods_l {
+	width: 50%;
+	box-sizing: border-box;
+	height: 184px;
+	border-right: 1px solid #eeeeee;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.goods_l .pic {
+	height: 130px;
+}
+
+.goods_l .pic img {
+	margin-top: 30px;
+	width: 79px;
+	height: 80px;
+}
+
+.goods_l .price p:nth-child(2) {
+	color: red;
+}
+
+.goods_r {
+	box-sizing: border-box;
+	width: 50%;
+	height: 184px;
+	border-left: 1px solid #eeeeee;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.goods_r .pic {
+	height: 130px;
+}
+
+.goods_r .pic img {
+	margin-top: 30px;
+	width: 82px;
+	height: 82px;
+}
+
+.goods_r .price p:nth-child(2) {
+	color: red;
+}
